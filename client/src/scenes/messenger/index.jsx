@@ -19,7 +19,7 @@ const Messenger = () => {
     const socket = useRef();
 
     useEffect(() => {
-        socket.current = io("https://somesocialpl.netlify.app/");
+        socket.current = io("https://social-network-socket.onrender.com/");
     }, []);
 
     useEffect(() => {
