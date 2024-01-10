@@ -20,7 +20,7 @@ const ProfilePage = () => {
     const dispatch = useDispatch();
 
     const getUser = async () => {
-        const response = await fetch(`https://mernserv.onrender.com/users/${profileUserId}`, {
+        const response = await fetch(`https://social-network-server-7ihj.onrender.com/users/${profileUserId}`, {
             method: "GET",
             headers: { Authorization: `Bearer ${token}` },
         });

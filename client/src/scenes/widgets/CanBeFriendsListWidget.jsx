@@ -12,7 +12,7 @@ const CanBeFriendsList = ({ userId, isOwnProfile }) => {
   const canBeFriends = useSelector((state) => state.user.canBeFriends);
   const getRandomFriends = async () => {
     const response = await fetch(
-        `https://mernserv.onrender.com/users/${userId}/random/5`, // Получаем 5 случайных пользователей
+        `https://social-network-server-7ihj.onrender.com/users/${userId}/random/5`, // Получаем 5 случайных пользователей
         {
             method: "GET",
             headers: { Authorization: `Bearer ${token}` },

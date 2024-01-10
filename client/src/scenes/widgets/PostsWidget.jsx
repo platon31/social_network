@@ -12,9 +12,9 @@ const PostsWidget = ({ userId, isProfile = false, searchText }) => {
   
   const fetchPosts = async () => {
     setIsLoading(true);
-    let url = `https://mernserv.onrender.com/posts?page=${pageNumber}`;
+    let url = `https://social-network-server-7ihj.onrender.com/posts?page=${pageNumber}`;
     if (isProfile) {
-      url = `https://mernserv.onrender.com/posts/${userId}/posts?page=${pageNumber}`;
+      url = `https://social-network-server-7ihj.onrender.com/posts/${userId}/posts?page=${pageNumber}`;
     }
 
     const response = await fetch(url, {

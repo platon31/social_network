@@ -29,7 +29,7 @@ const MessagesListWidget = ({ userId }) => {
         // Fetch conversations from the server using the token and userId
         const getMessages = async () => {
             try {
-                const response = await fetch(`https://mernserv.onrender.com/messages/getMessages/${conversation._id}`, {
+                const response = await fetch(`https://social-network-server-7ihj.onrender.com/messages/getMessages/${conversation._id}`, {
                     method: "GET",
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -56,7 +56,7 @@ const MessagesListWidget = ({ userId }) => {
 
     const getUser = async (senderId) => {
         try {
-            const response = await fetch(`https://mernserv.onrender.com/users/${senderId}`, {
+            const response = await fetch(`https://social-network-server-7ihj.onrender.com/users/${senderId}`, {
                 method: "GET",
                 headers: { Authorization: `Bearer ${token}` },
             });

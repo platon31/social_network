@@ -21,7 +21,7 @@ const Conversation = ({ conversation, lastMessage, onClick, isHomePage }) => {
       const secondUserId = conversation.members.find(memberId => memberId !== loggedInUserId);
 
       // Запрос к серверу для получения информации о втором пользователе
-      const response = await fetch(`https://mernserv.onrender.com/users/${secondUserId}`, {
+      const response = await fetch(`https://social-network-server-7ihj.onrender.com/users/${secondUserId}`, {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
       });

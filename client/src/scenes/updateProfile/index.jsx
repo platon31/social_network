@@ -52,7 +52,7 @@ const UpdateProfile = () => {
         // Fetch user data and set formValues when the component mounts
         const fetchUserData = async () => {
             try {
-                const response = await fetch(`https://mernserv.onrender.com/users/${_id}`, {
+                const response = await fetch(`https://social-network-server-7ihj.onrender.com/users/${_id}`, {
                     method: "GET",
                     headers: { Authorization: `Bearer ${token}` },
                 });
@@ -112,7 +112,7 @@ const UpdateProfile = () => {
                 picturePath: formValues.picturePath,
             };
     
-            const response = await fetch(`https://mernserv.onrender.com/users/${_id}`, {
+            const response = await fetch(`https://social-network-server-7ihj.onrender.com/users/${_id}`, {
                 method: "PATCH",
                 headers: {
                     Authorization: `Bearer ${token}`,

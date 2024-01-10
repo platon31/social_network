@@ -49,7 +49,7 @@ const PostWidget = ({
     if (userIdsToLoad.length > 0) {
       const responses = await Promise.all(
         userIdsToLoad.map(async (userId) => {
-          const response = await fetch(`https://mernserv.onrender.com/users/${userId}`, {
+          const response = await fetch(`https://social-network-server-7ihj.onrender.com/users/${userId}`, {
             method: "GET",
             headers: { Authorization: `Bearer ${token}` },
           });
@@ -73,7 +73,7 @@ const PostWidget = ({
   }, [isComments, comments, token]);
 
   const patchLike = async () => {
-    const response = await fetch(`https://mernserv.onrender.com/posts/${postId}/like`, {
+    const response = await fetch(`https://social-network-server-7ihj.onrender.com/posts/${postId}/like`, {
       method: "PATCH",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -88,7 +88,7 @@ const PostWidget = ({
   const handleCommentSubmit = async () => {
     await loadCommentUsers();
 
-    const response = await fetch(`https://mernserv.onrender.com/posts/${postId}/addComment`, {
+    const response = await fetch(`https://social-network-server-7ihj.onrender.com/posts/${postId}/addComment`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -128,7 +128,7 @@ const PostWidget = ({
           height="auto"
           alt="post"
           style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-          src={`https://mernserv.onrender.com/assets/${picturePath}`}
+          src={`https://social-network-server-7ihj.onrender.com/assets/${picturePath}`}
         />
       )}
       <FlexBetween mt="0.25rem">

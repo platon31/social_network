@@ -24,7 +24,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath, isOwnPost, isOwnPro
 
   const patchFriend = async () => {
     const response = await fetch(
-      `https://mernserv.onrender.com/users/${_id}/${friendId}`,
+      `https://social-network-server-7ihj.onrender.com/users/${_id}/${friendId}`,
       {
         method: "PATCH",
         headers: {

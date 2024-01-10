@@ -39,7 +39,7 @@ const UserWidget = ({ userId, picturePath, isOwnProfile, isChatButtonVisible }) 
   const patchFriend = async () => {
     try {
       const response = await fetch(
-        `https://mernserv.onrender.com/users/${_id}/${userId}`,
+        `https://social-network-server-7ihj.onrender.com/users/${_id}/${userId}`,
         {
           method: "PATCH",
           headers: {
@@ -49,7 +49,7 @@ const UserWidget = ({ userId, picturePath, isOwnProfile, isChatButtonVisible }) 
         }
       );
       const response2 = await fetch(
-        `https://mernserv.onrender.com/users/${userId}/friends`,
+        `https://social-network-server-7ihj.onrender.com/users/${userId}/friends`,
         {
           method: "GET",
           headers: { Authorization: `Bearer ${token}` },
@@ -67,7 +67,7 @@ const UserWidget = ({ userId, picturePath, isOwnProfile, isChatButtonVisible }) 
 
 
   const getUser = async () => {
-    const response = await fetch(`https://mernserv.onrender.com/users/${userId}`, {
+    const response = await fetch(`https://social-network-server-7ihj.onrender.com/users/${userId}`, {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -79,7 +79,7 @@ const UserWidget = ({ userId, picturePath, isOwnProfile, isChatButtonVisible }) 
     try {
       // Проверка наличия беседы между текущим пользователем и просматриваемым профилем
       const response = await fetch(
-        `https://mernserv.onrender.com/conversations/between/${_id}/${userId}`,
+        `https://social-network-server-7ihj.onrender.com/conversations/between/${_id}/${userId}`,
         {
           method: "GET",
           headers: {
@@ -101,7 +101,7 @@ const UserWidget = ({ userId, picturePath, isOwnProfile, isChatButtonVisible }) 
           receiverId: userId,
         };
         const createConvResponse = await fetch(
-          "https://mernserv.onrender.com/conversations/createConv",
+          "https://social-network-server-7ihj.onrender.com/conversations/createConv",
           {
             method: "POST",
             headers: {
@@ -112,7 +112,7 @@ const UserWidget = ({ userId, picturePath, isOwnProfile, isChatButtonVisible }) 
           }
         );
         const responseConv = await fetch(
-          `https://mernserv.onrender.com/conversations/between/${_id}/${userId}`,
+          `https://social-network-server-7ihj.onrender.com/conversations/between/${_id}/${userId}`,
           {
             method: "GET",
             headers: {

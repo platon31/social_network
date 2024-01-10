@@ -62,7 +62,7 @@ const MyPostWidget = ({ picturePath }) => {
         console.log(`${key}: ${value}`);
       });
   
-      const response = await fetch(`https://mernserv.onrender.com/posts`, {
+      const response = await fetch(`https://social-network-server-7ihj.onrender.com/posts`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: formData,
@@ -72,7 +72,7 @@ const MyPostWidget = ({ picturePath }) => {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
   
-      let url = `https://mernserv.onrender.com/posts`;
+      let url = `https://social-network-server-7ihj.onrender.com/posts`;
       const response2 = await fetch(url, {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

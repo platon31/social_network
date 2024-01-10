@@ -47,7 +47,7 @@ const ChatBoxWidget = () => {
             if (arrivalMessage && conversation?.members.includes(arrivalMessage.sender)) {
                 try {
                     const response = await fetch(
-                        `https://mernserv.onrender.com/messages/getMessages/${conversation._id}`,
+                        `https://social-network-server-7ihj.onrender.com/messages/getMessages/${conversation._id}`,
                         {
                             method: "GET",
                             headers: {
@@ -94,7 +94,7 @@ const ChatBoxWidget = () => {
             });
 
             const response = await fetch(
-                `https://mernserv.onrender.com/messages/createMessage`,
+                `https://social-network-server-7ihj.onrender.com/messages/createMessage`,
                 {
                     method: "POST",
                     headers: {
@@ -111,7 +111,7 @@ const ChatBoxWidget = () => {
             }
 
             const response2 = await fetch(
-                `https://mernserv.onrender.com/messages/getMessages/${conversation._id}`,
+                `https://social-network-server-7ihj.onrender.com/messages/getMessages/${conversation._id}`,
                 {
                     method: "GET",
                     headers: {
