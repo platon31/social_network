@@ -164,10 +164,6 @@ const MyPostWidget = ({ picturePath }) => {
           >
             Фото
           </Typography>
-          <TagIcon sx={{ color: mediumMain, marginLeft: '1rem' }} />
-          <Typography color={mediumMain} sx={{ "&:hover": { cursor: "pointer", color: medium } }}>
-            Теги
-          </Typography>
         </FlexBetween>
 
 

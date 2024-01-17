@@ -92,8 +92,6 @@ const Navbar = () => {
                     <IconButton onClick={() => navigate("/messenger")}>
                         <Message sx={{ fontSize: "25px" }} />
                     </IconButton>
-                    <Notifications sx={{ fontSize: "25px" }} />
-                    <Help sx={{ fontSize: "25px" }} />
                     <Button sx={{ fontSize: "15px" }} onClick={() => dispatch(setLogout())}>Выход</Button>
                 </FlexBetween>
             ) : (
@@ -146,8 +144,6 @@ const Navbar = () => {
                         <IconButton onClick={() => navigate("/messenger")}>
                             <Message sx={{ fontSize: "25px" }} />
                         </IconButton>
-                        <Notifications sx={{ fontSize: "25px" }} />
-                        <Help sx={{ fontSize: "25px" }} />
                         <Button sx={{ fontSize: "15px" }} onClick={() => dispatch(setLogout())}>Выход</Button>
                     </FlexBetween>
                 </Box>
